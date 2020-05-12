@@ -4,12 +4,14 @@ import DeckList from './components/DeckList';
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import reducer from './reducers'
+import AdddDeck from './components/AddDeck';
 
 export default function App() {
   return (
     <Provider store={createStore(reducer)}>
       <View style={styles.container}>
         <DeckList/>
+        <AdddDeck/>
       </View>
     </Provider>
   );
