@@ -17,6 +17,7 @@ import DeckView from './components/DeckView';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+
 function Home() {
   return (
     <Tab.Navigator
@@ -52,7 +53,7 @@ export default function App() {
       <View style={{ flex: 1, justifyContent: 'center' }}>
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="DeckList" component={Home} />
+            <Stack.Screen name="Home" component={Home}  />
             <Stack.Screen name="AddDeck" component={AddDeck} />
             <Stack.Screen name="DeckView" component={DeckView} />
           </Stack.Navigator>
