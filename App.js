@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Platform, View } from 'react-native';
+import { View } from 'react-native';
 import DeckList from './components/DeckList';
 import AddDeck from './components/AddDeck'
 import {createStore} from 'redux'
@@ -8,10 +8,9 @@ import reducer from './reducers'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack';
-//import {FontAwesome, MaterialCommunityIcons} from '@expo/vector-icons'
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { purple, white,green } from './utils/color'
 import DeckView from './components/DeckView';
+import AddCard from './components/AddCard';
 
 
 const Tab = createBottomTabNavigator();
@@ -33,8 +32,6 @@ function Home() {
                   ? 'ios-add-circle'
                   : 'ios-add-circle-outline';
               }
-  
-              // You can return any component that you like here!
               return <Ionicons name={iconName} size={size} color={color} />;
             },
           })}
@@ -56,6 +53,7 @@ export default function App() {
             <Stack.Screen name="Home" component={Home}  />
             <Stack.Screen name="AddDeck" component={AddDeck} />
             <Stack.Screen name="DeckView" component={DeckView} />
+            <Stack.Screen name="AddCard" component={AddCard} />
           </Stack.Navigator>
           </NavigationContainer>
 

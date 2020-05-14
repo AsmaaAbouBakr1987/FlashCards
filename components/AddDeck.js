@@ -5,7 +5,7 @@ import { addDeck } from '../actions'
 import {connect} from 'react-redux'
 import {white, orange} from '../utils/color'
 
-class AdddDeck extends Component{
+class AddDeck extends Component{
     state = {
 		text: ''
     }
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default connect() (AdddDeck)
+export default connect() (AddDeck)

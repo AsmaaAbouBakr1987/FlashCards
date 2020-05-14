@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {StyleSheet, View, Text, Button} from 'react-native'
-import {getData, getDecks} from '../utils/api'
+import { getDecks} from '../utils/api'
 import {connect} from 'react-redux'
 import {receiveDecks} from '../actions'
 
