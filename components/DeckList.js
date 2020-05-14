@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import {StyleSheet, View, Text, Button} from 'react-native'
-import {getData} from '../utils/api'
+import {getData, getDecks} from '../utils/api'
+import {connect} from 'react-redux'
+import {receiveDecks} from '../actions'
 
 class DeckList extends Component{
+    componentDidMount(){
+		getDecks()
+		.then(decks => this.props.receiveAllDecks(decks))
+	}
     render(){
-        const decks= getData()
-
+        const {decks}= this.props
         return(
             <View style={styles.container}>
                 {Object.keys(decks).map((deck)=>{
@@ -37,4 +42,14 @@ const styles = StyleSheet.create({
     },
   });
 
-export default DeckList
+function mapStateToProps(decks){
+    return {
+        decks
+    }
+} 
+function mapDispatchToProps(dispatch){
+	return {
+		receiveAllDecks: (decks) => dispatch(receiveDecks(decks))
+	}
+}
+export default connect(mapStateToProps, mapDispatchToProps)(DeckList)

@@ -1,5 +1,4 @@
 import { AsyncStorage } from 'react-native'
-
 const FLASHCARDS_STORAGE_KEY = 'flashcards: decks'
 
 const initialData = {
