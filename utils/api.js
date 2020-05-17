@@ -7,11 +7,13 @@ const initialData = {
       questions: [
         {
           question: 'What is React?',
-          answer: 'A library for managing user interfaces'
+          answer: 'A library for managing user interfaces',
+          correctAnswer: 'true'
         },
         {
           question: 'Where do you make Ajax requests in React?',
-          answer: 'The componentDidMount lifecycle event'
+          answer: 'The componentDidMount lifecycle event',
+          correctAnswer: 'false'
         }
       ]
     },
@@ -20,7 +22,8 @@ const initialData = {
       questions: [
         {
           question: 'What is a closure?',
-          answer: 'The combination of a function and the lexical environment within which that function was declared.'
+          answer: 'The combination of a function and the lexical environment within which that function was declared.',
+          correctAnswer: 'true'
         }
       ]
     }

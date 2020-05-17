@@ -11,6 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import DeckView from './components/DeckView';
 import AddCard from './components/AddCard';
+import Quiz from './components/Quiz'
 
 
 const Tab = createBottomTabNavigator();
@@ -54,6 +55,7 @@ export default function App() {
             <Stack.Screen name="AddDeck" component={AddDeck} />
             <Stack.Screen name="DeckView" component={DeckView} />
             <Stack.Screen name="AddCard" component={AddCard} />
+            <Stack.Screen name="Quiz" component={Quiz} />
           </Stack.Navigator>
           </NavigationContainer>
 
