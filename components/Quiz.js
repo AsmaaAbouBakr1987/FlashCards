@@ -139,7 +139,7 @@ handleAnimation = () => {
 						<Text style={styles.mainText}>You got {this.state.correct} out of {decks[deck].questions.length} !</Text>
 					</Animated.View>
 
-						{this.state.correct > this.state.incorrect ?  <Animated.View style={rotateStyles}><Text style={{fontSize: 90}}>🕺</Text></Animated.View>
+						{this.state.correct > this.state.incorrect ?  <Animated.View style={rotateStyles}><Text style={{fontSize: 90}}>👏👏👏</Text></Animated.View>
 						: <Animated.View style={rotateStyles}><Text style={{fontSize: 90}}>😭😭😭</Text></Animated.View>}
 
 						<View>
