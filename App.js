@@ -12,7 +12,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import DeckView from './components/DeckView';
 import AddCard from './components/AddCard';
 import Quiz from './components/Quiz'
-
+import {setLocalNotification} from './utils/helpers'
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -46,6 +46,11 @@ function Home() {
   );
 }
 export default function App() {
+  const methods = {
+    componentDidMount(){
+      setLocalNotification()
+    }
+  };
   return (
     <Provider store={createStore(reducer)}>
       <View style={{ flex: 1, justifyContent: 'center' }}>

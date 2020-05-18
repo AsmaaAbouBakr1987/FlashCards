@@ -18,7 +18,7 @@ class DeckList extends Component{
                     return (
                         <View key={deck}>
                             <Text>{title}</Text>
-                            <Text>{questions.length}</Text>
+                            <Text>{questions.length} Cards</Text>
 
                             <Button 
                                 onPress={() => this.props.navigation.navigate('DeckView', {postId: deck})} 
